@@ -39,20 +39,9 @@ services:
   #     - firefox
   #   volumes:
   #     - /Users/himarora1/IdeaProjects/docker/search-results2:/usr/share/udemy/test-output
-  book-flight-module:
-    image: himanshu/selenium-docker
-    shm_size: "1gb"
-    environment:
-      - HUB_HOST=hub
-      - MODULE=book-flight-module.xml
-      - BROWSER=chrome
-    depends_on:
-      - chrome
-      - firefox
-    volumes:
-      - /Users/himarora1/IdeaProjects/docker/book-results1:/usr/share/udemy/test-output
-  # book-flight-module2:
+  # book-flight-module:
   #   image: himanshu/selenium-docker
+  #   shm_size: "1gb"
   #   environment:
   #     - HUB_HOST=hub
   #     - MODULE=book-flight-module.xml
@@ -61,5 +50,16 @@ services:
   #     - chrome
   #     - firefox
   #   volumes:
-  #     - /Users/himarora1/IdeaProjects/docker/book-results2:/usr/share/udemy/test-output
+  #     - /Users/himarora1/IdeaProjects/docker/book-results1:/usr/share/udemy/test-output
+  book-flight-module:
+    image: himanshu/selenium-docker
+    environment:
+      - HUB_HOST=hub
+      - MODULE=book-flight-module.xml
+      - BROWSER=chrome
+    depends_on:
+      - chrome
+      - firefox
+    volumes:
+      - /Users/himarora1/IdeaProjects/docker/book-results2:/usr/share/udemy/test-output
   
