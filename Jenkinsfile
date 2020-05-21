@@ -9,7 +9,7 @@ pipeline{
         stage("Run Tests"){
 
             steps{
-                sh "docker-compose up search-module search-module2"
+                sh "docker-compose up search-module book-flight-module"
             }
         }
 

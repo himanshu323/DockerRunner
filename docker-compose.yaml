@@ -27,18 +27,18 @@ services:
       - chrome
       - firefox
     volumes:
-      - /Users/himarora1/dockerPractice/dockerCI/output/search-results1:/usr/share/udemy/test-output
-  search-module2:
-    image: himanshu/selenium-docker
-    environment:
-      - HUB_HOST=hub
-      - MODULE=search-module.xml
-      - BROWSER=chrome
-    depends_on:
-      - chrome
-      - firefox
-    volumes:
-      - /Users/himarora1/dockerPractice/dockerCI/output/search-results2:/usr/share/udemy/test-output
+      - ./output/search-results:/usr/share/udemy/test-output
+  # search-module2:
+  #   image: himanshu/selenium-docker
+  #   environment:
+  #     - HUB_HOST=hub
+  #     - MODULE=search-module.xml
+  #     - BROWSER=chrome
+  #   depends_on:
+  #     - chrome
+  #     - firefox
+  #   volumes:
+  #     - /Users/himarora1/dockerPractice/dockerCI/output/search-results2:/usr/share/udemy/test-output
   # book-flight-module:
   #   image: himanshu/selenium-docker
   #   shm_size: "1gb"
@@ -61,5 +61,5 @@ services:
       - chrome
       - firefox
     volumes:
-      - /Users/himarora1/IdeaProjects/docker/book-results2:/usr/share/udemy/test-output
+      - ./output/book-results:/usr/share/udemy/test-output
   
